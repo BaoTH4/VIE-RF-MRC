@@ -266,7 +266,7 @@ class RoleFlippedModule(nn.Module):
           idx+=1
           while idx<len(passenge_index) and (idx in two_index or idx in ignore_index):
             opinion.append(idx)
-            probability=probability*prob_list[idx].item()
+            probability=probability+prob_list[idx].item()
             idx+=1
           
           probability=probability/(len(opinion))
